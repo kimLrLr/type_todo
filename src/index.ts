@@ -1,7 +1,7 @@
-let todoItems: any;
+let todoItems: object[];
 
 // api
-function fetchTodoItems() {
+function fetchTodoItems(): object[] {
   const todos = [
     { id: 1, title: '안녕', done: false },
     { id: 2, title: '타입', done: false },
@@ -11,7 +11,7 @@ function fetchTodoItems() {
 }
 
 // crud methods
-function fetchTodos() {
+function fetchTodos(): object[] {
   const todos = fetchTodoItems();
   return todos;
 }
