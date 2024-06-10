@@ -16,25 +16,25 @@ function fetchTodos(): object[] {
   return todos;
 }
 
-function addTodo(todo): void {
+function addTodo(todo: object): void {
   todoItems.push(todo);
 }
 
-function deleteTodo(index) {
+function deleteTodo(index: number): void {
   todoItems.splice(index, 1);
 }
 
-function completeTodo(index, todo) {
+function completeTodo(index: number, todo: object): void {
   todo.done = true;
   todoItems.splice(index, 1, todo);
 }
 
 // business logic
-function logFirstTodo() {
+function logFirstTodo(): object {
   return todoItems[0];
 }
 
-function showCompleted() {
+function showCompleted(): object[] {
   return todoItems.filter(item => item.done);
 }
 
@@ -44,7 +44,7 @@ function addTwoTodoItems() {
 }
 
 // NOTE: 유틸 함수
-function log() {
+function log(): void {
   console.log(todoItems);
 }
 
